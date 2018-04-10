@@ -1,0 +1,10 @@
+platform :ios, '11.2'
+
+inhibit_all_warnings!
+use_frameworks!
+
+target 'TheraMe Mobile' do
+
+pod 'SideMenu'
+
+end

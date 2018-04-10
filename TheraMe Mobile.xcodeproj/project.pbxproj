@@ -7,12 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EF8870D8DB0A682FC02BE14 /* Pods_TheraMe_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874AB83A9A53C46551E13A70 /* Pods_TheraMe_Mobile.framework */; };
 		EBC86E012079A39B00D405D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E002079A39B00D405D4 /* AppDelegate.swift */; };
 		EBC86E032079A39B00D405D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E022079A39B00D405D4 /* ViewController.swift */; };
 		EBC86E062079A39B00D405D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC86E042079A39B00D405D4 /* Main.storyboard */; };
 		EBC86E082079A39B00D405D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC86E072079A39B00D405D4 /* Assets.xcassets */; };
 		EBC86E0B2079A39B00D405D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC86E092079A39B00D405D4 /* LaunchScreen.storyboard */; };
 		EBC86E162079A39B00D405D4 /* TheraMe_MobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E152079A39B00D405D4 /* TheraMe_MobileTests.swift */; };
+		EBC86E222079A3CA00D405D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC86E212079A3CA00D405D4 /* UIKit.framework */; };
+		EBC86E242079A3D400D405D4 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC86E232079A3D400D405D4 /* AVKit.framework */; };
+		EBC86E262079A40F00D405D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC86E252079A40F00D405D4 /* Foundation.framework */; };
+		EBC86E3A2079A7BF00D405D4 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E392079A7BF00D405D4 /* NavigationController.swift */; };
+		EBC86E3C2079A92400D405D4 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = EBC86E3B2079A92400D405D4 /* podfile */; };
+		EBC86E402079AB7900D405D4 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E3F2079AB7900D405D4 /* SideMenuController.swift */; };
+		EBC86E472079AE4000D405D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E462079AE4000D405D4 /* HomeViewController.swift */; };
+		EBC86E4B2079BED600D405D4 /* Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E4A2079BED600D405D4 /* Serialization.swift */; };
+		EBC86E4D207A54C600D405D4 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E4C207A54C600D405D4 /* Assignment.swift */; };
+		EBC86E4F207A550200D405D4 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E4E207A550200D405D4 /* Exercise.swift */; };
+		EBC86E51207A612800D405D4 /* SharedObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E50207A612800D405D4 /* SharedObjectManager.swift */; };
+		EBC86E53207A6B3F00D405D4 /* MediaHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E52207A6B3F00D405D4 /* MediaHandler.swift */; };
+		EBC86E55207A785400D405D4 /* AssignmentCellDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E54207A785300D405D4 /* AssignmentCellDone.swift */; };
+		EBC86E57207A785F00D405D4 /* AssignmentCellNotDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E56207A785F00D405D4 /* AssignmentCellNotDone.swift */; };
+		EBC86E59207AB7F900D405D4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E58207AB7F900D405D4 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2803BD3B4CC5EF369A8A29FA /* Pods-TheraMe Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheraMe Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		3A70BB17C831A4806E56E068 /* Pods-TheraMe Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheraMe Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile.release.xcconfig"; sourceTree = "<group>"; };
+		874AB83A9A53C46551E13A70 /* Pods_TheraMe_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheraMe_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC86DFD2079A39B00D405D4 /* TheraMe Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TheraMe Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC86E002079A39B00D405D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBC86E022079A39B00D405D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +55,21 @@
 		EBC86E112079A39B00D405D4 /* TheraMe MobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TheraMe MobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC86E152079A39B00D405D4 /* TheraMe_MobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheraMe_MobileTests.swift; sourceTree = "<group>"; };
 		EBC86E172079A39B00D405D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC86E212079A3CA00D405D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EBC86E232079A3D400D405D4 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		EBC86E252079A40F00D405D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EBC86E392079A7BF00D405D4 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		EBC86E3B2079A92400D405D4 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
+		EBC86E3F2079AB7900D405D4 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		EBC86E462079AE4000D405D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EBC86E4A2079BED600D405D4 /* Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serialization.swift; sourceTree = "<group>"; };
+		EBC86E4C207A54C600D405D4 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		EBC86E4E207A550200D405D4 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		EBC86E50207A612800D405D4 /* SharedObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedObjectManager.swift; sourceTree = "<group>"; };
+		EBC86E52207A6B3F00D405D4 /* MediaHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaHandler.swift; sourceTree = "<group>"; };
+		EBC86E54207A785300D405D4 /* AssignmentCellDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCellDone.swift; sourceTree = "<group>"; };
+		EBC86E56207A785F00D405D4 /* AssignmentCellNotDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCellNotDone.swift; sourceTree = "<group>"; };
+		EBC86E58207AB7F900D405D4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC86E262079A40F00D405D4 /* Foundation.framework in Frameworks */,
+				EBC86E242079A3D400D405D4 /* AVKit.framework in Frameworks */,
+				EBC86E222079A3CA00D405D4 /* UIKit.framework in Frameworks */,
+				2EF8870D8DB0A682FC02BE14 /* Pods_TheraMe_Mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +94,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5284A157BB6298F5919B6859 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2803BD3B4CC5EF369A8A29FA /* Pods-TheraMe Mobile.debug.xcconfig */,
+				3A70BB17C831A4806E56E068 /* Pods-TheraMe Mobile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EBC86DF42079A39B00D405D4 = {
 			isa = PBXGroup;
 			children = (
+				EBC86E3B2079A92400D405D4 /* podfile */,
 				EBC86DFF2079A39B00D405D4 /* TheraMe Mobile */,
 				EBC86E142079A39B00D405D4 /* TheraMe MobileTests */,
 				EBC86DFE2079A39B00D405D4 /* Products */,
+				EBC86E202079A3CA00D405D4 /* Frameworks */,
+				5284A157BB6298F5919B6859 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +127,23 @@
 		EBC86DFF2079A39B00D405D4 /* TheraMe Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				EBC86E4A2079BED600D405D4 /* Serialization.swift */,
 				EBC86E002079A39B00D405D4 /* AppDelegate.swift */,
 				EBC86E022079A39B00D405D4 /* ViewController.swift */,
 				EBC86E042079A39B00D405D4 /* Main.storyboard */,
 				EBC86E072079A39B00D405D4 /* Assets.xcassets */,
 				EBC86E092079A39B00D405D4 /* LaunchScreen.storyboard */,
 				EBC86E0C2079A39B00D405D4 /* Info.plist */,
+				EBC86E392079A7BF00D405D4 /* NavigationController.swift */,
+				EBC86E3F2079AB7900D405D4 /* SideMenuController.swift */,
+				EBC86E462079AE4000D405D4 /* HomeViewController.swift */,
+				EBC86E4C207A54C600D405D4 /* Assignment.swift */,
+				EBC86E4E207A550200D405D4 /* Exercise.swift */,
+				EBC86E50207A612800D405D4 /* SharedObjectManager.swift */,
+				EBC86E52207A6B3F00D405D4 /* MediaHandler.swift */,
+				EBC86E54207A785300D405D4 /* AssignmentCellDone.swift */,
+				EBC86E56207A785F00D405D4 /* AssignmentCellNotDone.swift */,
+				EBC86E58207AB7F900D405D4 /* WelcomeViewController.swift */,
 			);
 			path = "TheraMe Mobile";
 			sourceTree = "<group>";
@@ -96,6 +157,17 @@
 			path = "TheraMe MobileTests";
 			sourceTree = "<group>";
 		};
+		EBC86E202079A3CA00D405D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBC86E252079A40F00D405D4 /* Foundation.framework */,
+				EBC86E232079A3D400D405D4 /* AVKit.framework */,
+				EBC86E212079A3CA00D405D4 /* UIKit.framework */,
+				874AB83A9A53C46551E13A70 /* Pods_TheraMe_Mobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBC86E1A2079A39B00D405D4 /* Build configuration list for PBXNativeTarget "TheraMe Mobile" */;
 			buildPhases = (
+				E9E0CF87AB9C5CB5E7E31010 /* [CP] Check Pods Manifest.lock */,
 				EBC86DF92079A39B00D405D4 /* Sources */,
 				EBC86DFA2079A39B00D405D4 /* Frameworks */,
 				EBC86DFB2079A39B00D405D4 /* Resources */,
+				8FAEE7229DC63A88FE63FA2B /* [CP] Embed Pods Frameworks */,
+				5896EB378749BF1DAAF40812 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -181,6 +256,7 @@
 			files = (
 				EBC86E0B2079A39B00D405D4 /* LaunchScreen.storyboard in Resources */,
 				EBC86E082079A39B00D405D4 /* Assets.xcassets in Resources */,
+				EBC86E3C2079A92400D405D4 /* podfile in Resources */,
 				EBC86E062079A39B00D405D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,13 +270,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5896EB378749BF1DAAF40812 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FAEE7229DC63A88FE63FA2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9E0CF87AB9C5CB5E7E31010 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheraMe Mobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBC86DF92079A39B00D405D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC86E472079AE4000D405D4 /* HomeViewController.swift in Sources */,
+				EBC86E53207A6B3F00D405D4 /* MediaHandler.swift in Sources */,
+				EBC86E55207A785400D405D4 /* AssignmentCellDone.swift in Sources */,
+				EBC86E57207A785F00D405D4 /* AssignmentCellNotDone.swift in Sources */,
 				EBC86E032079A39B00D405D4 /* ViewController.swift in Sources */,
+				EBC86E4B2079BED600D405D4 /* Serialization.swift in Sources */,
+				EBC86E402079AB7900D405D4 /* SideMenuController.swift in Sources */,
+				EBC86E4D207A54C600D405D4 /* Assignment.swift in Sources */,
+				EBC86E3A2079A7BF00D405D4 /* NavigationController.swift in Sources */,
 				EBC86E012079A39B00D405D4 /* AppDelegate.swift in Sources */,
+				EBC86E51207A612800D405D4 /* SharedObjectManager.swift in Sources */,
+				EBC86E4F207A550200D405D4 /* Exercise.swift in Sources */,
+				EBC86E59207AB7F900D405D4 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,31 +492,35 @@
 		};
 		EBC86E1B2079A39B00D405D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2803BD3B4CC5EF369A8A29FA /* Pods-TheraMe Mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XXJ24K4KP;
 				INFOPLIST_FILE = "TheraMe Mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.therame.TheraMe-Mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		EBC86E1C2079A39B00D405D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A70BB17C831A4806E56E068 /* Pods-TheraMe Mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4XXJ24K4KP;
 				INFOPLIST_FILE = "TheraMe Mobile/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.therame.TheraMe-Mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
