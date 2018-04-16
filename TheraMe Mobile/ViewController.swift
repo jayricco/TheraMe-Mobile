@@ -18,8 +18,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
     var dispatchGroup: DispatchGroup = DispatchGroup()
     var sessionConfig: URLSessionConfiguration?
-    
-    var holderView = HolderView(frame: CGRect.zero)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

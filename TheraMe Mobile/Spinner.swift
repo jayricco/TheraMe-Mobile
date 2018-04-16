@@ -16,8 +16,8 @@ class Spinner: CAShapeLayer {
         let radius: CGFloat = (frame.height / 2) * 0.5
         self.frame = CGRect(x: 0, y: 0, width: frame.height, height: frame.height)
         let center = CGPoint(x: frame.height / 2, y: bounds.center.y)
-        let startAngle = 0 - M_PI_2
-        let endAngle = M_PI * 2 - M_PI_2
+        let startAngle = 0 - Double.pi/2
+        let endAngle = Double.pi * 2 - Double.pi/2
         let clockwise: Bool = true
         self.path = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(startAngle), endAngle: CGFloat(endAngle), clockwise: clockwise).cgPath
         

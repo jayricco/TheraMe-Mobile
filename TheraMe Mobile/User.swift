@@ -40,7 +40,7 @@ extension User {
         } else {
             thpst = nil
         }
-        self.init(id: json!["id"] as! String,
+        self.init(id: json!["id"] as? String,
                   email: json!["email"] as! String,
                   firstName: json!["firstName"] as! String,
                   lastName: json!["lastName"] as! String,
