@@ -34,12 +34,6 @@
 		EBC86E5D2083B07C00D405D4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC86E5C2083B07C00D405D4 /* AVFoundation.framework */; };
 		EBC86E622084EEA500D405D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E612084EEA500D405D4 /* User.swift */; };
 		EBC86E642084F7E400D405D4 /* ExercisePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E632084F7E400D405D4 /* ExercisePlayer.swift */; };
-		EBC86E66208503EF00D405D4 /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E65208503EF00D405D4 /* HolderView.swift */; };
-		EBC86E682085049700D405D4 /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E672085049700D405D4 /* ArcLayer.swift */; };
-		EBC86E6A2085057400D405D4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E692085057400D405D4 /* Colors.swift */; };
-		EBC86E6C2085058E00D405D4 /* OvalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E6B2085058E00D405D4 /* OvalLayer.swift */; };
-		EBC86E6E208505AC00D405D4 /* RectangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E6D208505AC00D405D4 /* RectangleLayer.swift */; };
-		EBC86E70208505B500D405D4 /* TriangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E6F208505B500D405D4 /* TriangleLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,12 +81,6 @@
 		EBC86E602084E57C00D405D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBC86E612084EEA500D405D4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EBC86E632084F7E400D405D4 /* ExercisePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlayer.swift; sourceTree = "<group>"; };
-		EBC86E65208503EF00D405D4 /* HolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderView.swift; sourceTree = "<group>"; };
-		EBC86E672085049700D405D4 /* ArcLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcLayer.swift; sourceTree = "<group>"; };
-		EBC86E692085057400D405D4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		EBC86E6B2085058E00D405D4 /* OvalLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalLayer.swift; sourceTree = "<group>"; };
-		EBC86E6D208505AC00D405D4 /* RectangleLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleLayer.swift; sourceTree = "<group>"; };
-		EBC86E6F208505B500D405D4 /* TriangleLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,12 +158,6 @@
 				EBC86E602084E57C00D405D4 /* README.md */,
 				EBC86E612084EEA500D405D4 /* User.swift */,
 				EBC86E632084F7E400D405D4 /* ExercisePlayer.swift */,
-				EBC86E65208503EF00D405D4 /* HolderView.swift */,
-				EBC86E672085049700D405D4 /* ArcLayer.swift */,
-				EBC86E692085057400D405D4 /* Colors.swift */,
-				EBC86E6B2085058E00D405D4 /* OvalLayer.swift */,
-				EBC86E6D208505AC00D405D4 /* RectangleLayer.swift */,
-				EBC86E6F208505B500D405D4 /* TriangleLayer.swift */,
 				EBAED1BA2085202C006D8311 /* LoginButton.swift */,
 				EBAED1BC20852855006D8311 /* FadeInAnimator.swift */,
 				EBAED1BE2085317D006D8311 /* Spinner.swift */,
@@ -366,11 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC86E622084EEA500D405D4 /* User.swift in Sources */,
-				EBC86E70208505B500D405D4 /* TriangleLayer.swift in Sources */,
 				EBC86E472079AE4000D405D4 /* HomeViewController.swift in Sources */,
-				EBC86E6E208505AC00D405D4 /* RectangleLayer.swift in Sources */,
 				EBC86E53207A6B3F00D405D4 /* MediaHandler.swift in Sources */,
-				EBC86E6A2085057400D405D4 /* Colors.swift in Sources */,
 				EBAED1BF2085317D006D8311 /* Spinner.swift in Sources */,
 				EBC86E55207A785400D405D4 /* AssignmentCellDone.swift in Sources */,
 				EBC86E642084F7E400D405D4 /* ExercisePlayer.swift in Sources */,
@@ -382,12 +361,9 @@
 				EBAED1BD20852855006D8311 /* FadeInAnimator.swift in Sources */,
 				EBC86E012079A39B00D405D4 /* AppDelegate.swift in Sources */,
 				EBC86E51207A612800D405D4 /* SharedObjectManager.swift in Sources */,
-				EBC86E682085049700D405D4 /* ArcLayer.swift in Sources */,
 				EBAED1BB2085202C006D8311 /* LoginButton.swift in Sources */,
-				EBC86E66208503EF00D405D4 /* HolderView.swift in Sources */,
 				EBC86E4F207A550200D405D4 /* Exercise.swift in Sources */,
 				EBC86E59207AB7F900D405D4 /* WelcomeViewController.swift in Sources */,
-				EBC86E6C2085058E00D405D4 /* OvalLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
