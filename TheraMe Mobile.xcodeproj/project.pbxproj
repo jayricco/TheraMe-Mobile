@@ -78,7 +78,6 @@
 		EBC86E56207A785F00D405D4 /* AssignmentCellNotDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCellNotDone.swift; sourceTree = "<group>"; };
 		EBC86E58207AB7F900D405D4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		EBC86E5C2083B07C00D405D4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		EBC86E602084E57C00D405D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBC86E612084EEA500D405D4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EBC86E632084F7E400D405D4 /* ExercisePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,7 +117,6 @@
 		EBC86DF42079A39B00D405D4 = {
 			isa = PBXGroup;
 			children = (
-				EBC86E602084E57C00D405D4 /* README.md */,
 				EBC86E3B2079A92400D405D4 /* podfile */,
 				EBC86DFF2079A39B00D405D4 /* TheraMe Mobile */,
 				EBC86E142079A39B00D405D4 /* TheraMe MobileTests */,
