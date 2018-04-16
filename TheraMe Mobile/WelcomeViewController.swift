@@ -10,11 +10,18 @@ import Foundation
 import UIKit
 
 class WelcomeViewController : UIViewController {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var exerciseDeterminationLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var hasAssignmentsView: UIView!
+    @IBOutlet weak var hasNoAssignmentsView: UIView!
     
-    @IBOutlet weak var visualeffectview: UIVisualEffectView!
+    @IBOutlet weak var noAssignWelcome: UILabel!
+    
+    @IBOutlet weak var assignWelcome: UILabel!
+    @IBOutlet weak var assignOutline: UILabel!
+    
+    override func viewDidLoad() {
+        hasAssignmentsView.center = view.center
+        hasNoAssignmentsView.center = view.center
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -22,21 +29,28 @@ class WelcomeViewController : UIViewController {
         bg.frame = self.view.frame
         self.view.addSubview(bg)
         self.view.sendSubview(toBack: bg)
-        visualeffectview.frame = self.view.frame
-        let count = SharedObjectManager.shared.assignments!.count
+    
+        let count = SharedObjectManager.shared.fin_unfin_count.1
         if  count > 0 {
             print("YOU HAVE ASSIGNMENTS")
-            exerciseDeterminationLabel.text! = "You have \(count) exercises left to complete!"
-            startButton.isHidden = false
+            let userName = SharedObjectManager.shared.principalUser!.firstName
+            view.addSubview(hasAssignmentsView)
+            assignWelcome.text! = "Welcome, \(userName)!"
+            assignOutline.text! = "You have \(count) exercises left to complete!"
+            //startButton.isHidden = false
         } else if count == 0 {
             print("YOU HAVE NO ASSIGNMENTS")
+            let userName = SharedObjectManager.shared.principalUser!.firstName
+            view.addSubview(hasNoAssignmentsView)
+            noAssignWelcome.text! = "Welcome, \(userName)!"
+            
         } else {
             print("ERROR")
         }
     }
     
-    
     @IBAction func startButtonPress(_ sender: UIButton) {
         performSegue(withIdentifier: "ViewSegue", sender: self)
     }
 }
+

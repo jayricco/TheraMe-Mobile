@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2EF8870D8DB0A682FC02BE14 /* Pods_TheraMe_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874AB83A9A53C46551E13A70 /* Pods_TheraMe_Mobile.framework */; };
+		EBAED1BB2085202C006D8311 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BA2085202C006D8311 /* LoginButton.swift */; };
+		EBAED1BD20852855006D8311 /* FadeInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BC20852855006D8311 /* FadeInAnimator.swift */; };
+		EBAED1BF2085317D006D8311 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BE2085317D006D8311 /* Spinner.swift */; };
 		EBC86E012079A39B00D405D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E002079A39B00D405D4 /* AppDelegate.swift */; };
 		EBC86E032079A39B00D405D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E022079A39B00D405D4 /* ViewController.swift */; };
 		EBC86E062079A39B00D405D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC86E042079A39B00D405D4 /* Main.storyboard */; };
@@ -21,7 +24,6 @@
 		EBC86E3C2079A92400D405D4 /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = EBC86E3B2079A92400D405D4 /* podfile */; };
 		EBC86E402079AB7900D405D4 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E3F2079AB7900D405D4 /* SideMenuController.swift */; };
 		EBC86E472079AE4000D405D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E462079AE4000D405D4 /* HomeViewController.swift */; };
-		EBC86E4B2079BED600D405D4 /* Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E4A2079BED600D405D4 /* Serialization.swift */; };
 		EBC86E4D207A54C600D405D4 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E4C207A54C600D405D4 /* Assignment.swift */; };
 		EBC86E4F207A550200D405D4 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E4E207A550200D405D4 /* Exercise.swift */; };
 		EBC86E51207A612800D405D4 /* SharedObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E50207A612800D405D4 /* SharedObjectManager.swift */; };
@@ -29,6 +31,15 @@
 		EBC86E55207A785400D405D4 /* AssignmentCellDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E54207A785300D405D4 /* AssignmentCellDone.swift */; };
 		EBC86E57207A785F00D405D4 /* AssignmentCellNotDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E56207A785F00D405D4 /* AssignmentCellNotDone.swift */; };
 		EBC86E59207AB7F900D405D4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E58207AB7F900D405D4 /* WelcomeViewController.swift */; };
+		EBC86E5D2083B07C00D405D4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC86E5C2083B07C00D405D4 /* AVFoundation.framework */; };
+		EBC86E622084EEA500D405D4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E612084EEA500D405D4 /* User.swift */; };
+		EBC86E642084F7E400D405D4 /* ExercisePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E632084F7E400D405D4 /* ExercisePlayer.swift */; };
+		EBC86E66208503EF00D405D4 /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E65208503EF00D405D4 /* HolderView.swift */; };
+		EBC86E682085049700D405D4 /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E672085049700D405D4 /* ArcLayer.swift */; };
+		EBC86E6A2085057400D405D4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E692085057400D405D4 /* Colors.swift */; };
+		EBC86E6C2085058E00D405D4 /* OvalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E6B2085058E00D405D4 /* OvalLayer.swift */; };
+		EBC86E6E208505AC00D405D4 /* RectangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E6D208505AC00D405D4 /* RectangleLayer.swift */; };
+		EBC86E70208505B500D405D4 /* TriangleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC86E6F208505B500D405D4 /* TriangleLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +56,9 @@
 		2803BD3B4CC5EF369A8A29FA /* Pods-TheraMe Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheraMe Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		3A70BB17C831A4806E56E068 /* Pods-TheraMe Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheraMe Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		874AB83A9A53C46551E13A70 /* Pods_TheraMe_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheraMe_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBAED1BA2085202C006D8311 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		EBAED1BC20852855006D8311 /* FadeInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInAnimator.swift; sourceTree = "<group>"; };
+		EBAED1BE2085317D006D8311 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		EBC86DFD2079A39B00D405D4 /* TheraMe Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TheraMe Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC86E002079A39B00D405D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBC86E022079A39B00D405D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +76,6 @@
 		EBC86E3B2079A92400D405D4 /* podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
 		EBC86E3F2079AB7900D405D4 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		EBC86E462079AE4000D405D4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EBC86E4A2079BED600D405D4 /* Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serialization.swift; sourceTree = "<group>"; };
 		EBC86E4C207A54C600D405D4 /* Assignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		EBC86E4E207A550200D405D4 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		EBC86E50207A612800D405D4 /* SharedObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedObjectManager.swift; sourceTree = "<group>"; };
@@ -70,6 +83,16 @@
 		EBC86E54207A785300D405D4 /* AssignmentCellDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCellDone.swift; sourceTree = "<group>"; };
 		EBC86E56207A785F00D405D4 /* AssignmentCellNotDone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentCellNotDone.swift; sourceTree = "<group>"; };
 		EBC86E58207AB7F900D405D4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		EBC86E5C2083B07C00D405D4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EBC86E602084E57C00D405D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EBC86E612084EEA500D405D4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EBC86E632084F7E400D405D4 /* ExercisePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlayer.swift; sourceTree = "<group>"; };
+		EBC86E65208503EF00D405D4 /* HolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolderView.swift; sourceTree = "<group>"; };
+		EBC86E672085049700D405D4 /* ArcLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcLayer.swift; sourceTree = "<group>"; };
+		EBC86E692085057400D405D4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		EBC86E6B2085058E00D405D4 /* OvalLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvalLayer.swift; sourceTree = "<group>"; };
+		EBC86E6D208505AC00D405D4 /* RectangleLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleLayer.swift; sourceTree = "<group>"; };
+		EBC86E6F208505B500D405D4 /* TriangleLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC86E5D2083B07C00D405D4 /* AVFoundation.framework in Frameworks */,
 				EBC86E262079A40F00D405D4 /* Foundation.framework in Frameworks */,
 				EBC86E242079A3D400D405D4 /* AVKit.framework in Frameworks */,
 				EBC86E222079A3CA00D405D4 /* UIKit.framework in Frameworks */,
@@ -127,7 +151,6 @@
 		EBC86DFF2079A39B00D405D4 /* TheraMe Mobile */ = {
 			isa = PBXGroup;
 			children = (
-				EBC86E4A2079BED600D405D4 /* Serialization.swift */,
 				EBC86E002079A39B00D405D4 /* AppDelegate.swift */,
 				EBC86E022079A39B00D405D4 /* ViewController.swift */,
 				EBC86E042079A39B00D405D4 /* Main.storyboard */,
@@ -144,6 +167,18 @@
 				EBC86E54207A785300D405D4 /* AssignmentCellDone.swift */,
 				EBC86E56207A785F00D405D4 /* AssignmentCellNotDone.swift */,
 				EBC86E58207AB7F900D405D4 /* WelcomeViewController.swift */,
+				EBC86E602084E57C00D405D4 /* README.md */,
+				EBC86E612084EEA500D405D4 /* User.swift */,
+				EBC86E632084F7E400D405D4 /* ExercisePlayer.swift */,
+				EBC86E65208503EF00D405D4 /* HolderView.swift */,
+				EBC86E672085049700D405D4 /* ArcLayer.swift */,
+				EBC86E692085057400D405D4 /* Colors.swift */,
+				EBC86E6B2085058E00D405D4 /* OvalLayer.swift */,
+				EBC86E6D208505AC00D405D4 /* RectangleLayer.swift */,
+				EBC86E6F208505B500D405D4 /* TriangleLayer.swift */,
+				EBAED1BA2085202C006D8311 /* LoginButton.swift */,
+				EBAED1BC20852855006D8311 /* FadeInAnimator.swift */,
+				EBAED1BE2085317D006D8311 /* Spinner.swift */,
 			);
 			path = "TheraMe Mobile";
 			sourceTree = "<group>";
@@ -160,6 +195,7 @@
 		EBC86E202079A3CA00D405D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBC86E5C2083B07C00D405D4 /* AVFoundation.framework */,
 				EBC86E252079A40F00D405D4 /* Foundation.framework */,
 				EBC86E232079A3D400D405D4 /* AVKit.framework */,
 				EBC86E212079A3CA00D405D4 /* UIKit.framework */,
@@ -329,19 +365,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC86E622084EEA500D405D4 /* User.swift in Sources */,
+				EBC86E70208505B500D405D4 /* TriangleLayer.swift in Sources */,
 				EBC86E472079AE4000D405D4 /* HomeViewController.swift in Sources */,
+				EBC86E6E208505AC00D405D4 /* RectangleLayer.swift in Sources */,
 				EBC86E53207A6B3F00D405D4 /* MediaHandler.swift in Sources */,
+				EBC86E6A2085057400D405D4 /* Colors.swift in Sources */,
+				EBAED1BF2085317D006D8311 /* Spinner.swift in Sources */,
 				EBC86E55207A785400D405D4 /* AssignmentCellDone.swift in Sources */,
+				EBC86E642084F7E400D405D4 /* ExercisePlayer.swift in Sources */,
 				EBC86E57207A785F00D405D4 /* AssignmentCellNotDone.swift in Sources */,
 				EBC86E032079A39B00D405D4 /* ViewController.swift in Sources */,
-				EBC86E4B2079BED600D405D4 /* Serialization.swift in Sources */,
 				EBC86E402079AB7900D405D4 /* SideMenuController.swift in Sources */,
 				EBC86E4D207A54C600D405D4 /* Assignment.swift in Sources */,
 				EBC86E3A2079A7BF00D405D4 /* NavigationController.swift in Sources */,
+				EBAED1BD20852855006D8311 /* FadeInAnimator.swift in Sources */,
 				EBC86E012079A39B00D405D4 /* AppDelegate.swift in Sources */,
 				EBC86E51207A612800D405D4 /* SharedObjectManager.swift in Sources */,
+				EBC86E682085049700D405D4 /* ArcLayer.swift in Sources */,
+				EBAED1BB2085202C006D8311 /* LoginButton.swift in Sources */,
+				EBC86E66208503EF00D405D4 /* HolderView.swift in Sources */,
 				EBC86E4F207A550200D405D4 /* Exercise.swift in Sources */,
 				EBC86E59207AB7F900D405D4 /* WelcomeViewController.swift in Sources */,
+				EBC86E6C2085058E00D405D4 /* OvalLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

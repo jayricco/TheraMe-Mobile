@@ -10,21 +10,101 @@ import Foundation
 import UIKit
 import AVFoundation
 
-class MediaHandler {
+private class CacheHandler {
+    static let shared = CacheHandler()
+    private var items: [URL] = []
+    private let fileManager = FileManager()
+    private lazy var mainDirectoryUrl: URL = {
+        let documentsUrl = self.fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first!.appendingPathComponent("TheraMe_MediaCache", isDirectory: true)
+        if(!fileManager.fileExists(atPath: documentsUrl.path)) {
+            do {
+                try fileManager.createDirectory(atPath: documentsUrl.path, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                print(error)
+            }
+        }
+
+        print("DOCS URL: \(documentsUrl.path)\n")
+        return documentsUrl
+    }()
+    deinit {
+        items.forEach { (storedItem) in
+            if (fileManager.fileExists(atPath: storedItem.path)) {
+                do {
+                    try fileManager.removeItem(atPath: storedItem.path)
+                } catch {
+                    print(error)
+                    print("\n")
+                }
+            }
+        }
+    }
+    func putVideo(exerciseId: String, tempUrl: URL) {
+        print("\n")
+        let newPath: URL = mainDirectoryUrl.appendingPathComponent(exerciseId).appendingPathExtension("mp4")
+        guard !fileManager.fileExists(atPath: newPath.path) else {
+            print("FILE EXISTS: \(newPath)")
+            DispatchQueue.global().async {
+                if let videoData = NSData(contentsOf: tempUrl) {
+                    self.fileManager.createFile(atPath: newPath.path, contents: videoData as Data)
+                }
+            }
+            return
+        }
+        
+        do {
+            try fileManager.replaceItemAt(newPath, withItemAt: tempUrl, backupItemName: nil, options: [])
+        } catch {
+            print(error)
+        }
+    }
+
+    func getVideo(exerciseId: String) -> AVAsset? {
+        guard fileManager.fileExists(atPath: mainDirectoryUrl.appendingPathComponent(exerciseId)
+            .appendingPathExtension("mp4").path) else {
+            return nil
+        }
+        let asset = AVAsset(url: mainDirectoryUrl.appendingPathComponent(exerciseId))
+        print(asset.allMediaSelections )
+        return asset
+    }
+    private func directoryFor(stringUrl: String) -> URL {
+        let fileURL = URL(string: stringUrl)!.lastPathComponent
+        let file = self.mainDirectoryUrl.appendingPathComponent(fileURL)
+        return file
+    }
+    
+}
+
+class MediaHandler: NSObject, AVAssetDownloadDelegate {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        print("\n\n=== FINISHED DOWNLOAD ===")
+        print("Task:\n")
+        print(downloadTask)
+        print("location:\n")
+        print(location)
+        print()
+    }
+    
     static var shared: MediaHandler?
-    var session: URLSession
-    var assetSession: AVAssetDownloadURLSession
+    var session: URLSession? = nil
+    var assetSession: AVAssetDownloadURLSession? = nil
+    var dq: OperationQueue? = nil
     init(auth_key: String) {
+        super.init()
+        dq = OperationQueue()
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = ["Authorization": auth_key]
         self.session = URLSession(configuration: config, delegate: nil, delegateQueue: OperationQueue.main)
         if SharedObjectManager.shared.thumbnails == nil {
             SharedObjectManager.shared.thumbnails = [:]
         }
+
+        
         let bkgrdConfig = URLSessionConfiguration.background(withIdentifier: "assetDownloadSession")
         bkgrdConfig.httpAdditionalHeaders = ["Authorization": auth_key]
-        self.assetSession = AVAssetDownloadURLSession(configuration: bkgrdConfig, assetDownloadDelegate: nil, delegateQueue: OperationQueue.main)
-        assetSession.getAllTasks { tasksArray in
+        self.assetSession = AVAssetDownloadURLSession(configuration: bkgrdConfig, assetDownloadDelegate: self as! AVAssetDownloadDelegate, delegateQueue: OperationQueue.main)
+        self.assetSession!.getAllTasks { tasksArray in
             // For each task, restore the state in the app
             for task in tasksArray {
                 guard let downloadTask = task as? AVAssetDownloadTask else { break }
@@ -33,40 +113,24 @@ class MediaHandler {
                 print(asset)
             }
         }
-    }
-    
-    func exerciseToPlayerItem(exercise: Exercise) -> AVPlayerItem {
         
-        let assetKeys = [
-            "playable",
-            "hasProtectedContent"
-        ]
-        let asset = AVURLAsset(url: URL(string: "https://localhost:8443/api/video?id=\(exercise.id!)")!)
-        let dltask = self.assetSession.makeAssetDownloadTask(asset: asset, assetTitle: exercise.title, assetArtworkData: nil , options: nil)!
-        dltask.resume()
-        let playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: assetKeys)
-        
-        return playerItem
     }
+
     
     func getExerciseThumbnail(exercise: Exercise) -> UIImage? {
         let dispatchGroup = DispatchGroup()
         var returnImage: UIImage? = nil
         guard let id = exercise.id else {
-            print("Exercise id is bad?\n\(exercise)")
             return nil
         }
         
         if var thumbnails = SharedObjectManager.shared.thumbnails {
             dispatchGroup.enter()
             if let preStored = thumbnails[id] {
-                print("Found thumbnail for \"\(id)\" already!")
                 return preStored
             }
             else {
-                print("Did not find thumbnail yet")
-
-                let task = self.session.dataTask(with: URL(string: "https://localhost:8443/api/thumbnail?id=\(id)")!) {
+                let task = self.session!.dataTask(with: URL(string: "https://localhost:8443/api/thumbnail?id=\(id)")!) {
                     (data, response, error) in
                     if let error = error {
 
@@ -74,27 +138,23 @@ class MediaHandler {
                         return
                     }
                     guard let data = data else {
-                        print("Thumbnail data was nil...")
                         dispatchGroup.leave()
                         return
                     }
                     if let img = UIImage(data: data) {
                         returnImage = img
-                        print("SETTING IMG: \(img)")
                         SharedObjectManager.shared.thumbnails!.updateValue(img.copy() as! UIImage, forKey: id)
                         dispatchGroup.leave()
                         
                     } else {
-                        print("something else bad happened")
                         dispatchGroup.leave()
                     }
-                    
                 }
                 task.resume()
                 }
         }
         dispatchGroup.notify(queue: DispatchQueue.main) {
-            print(returnImage)
+            print("Finished retrieving Thumbnails!")
         }
         return returnImage
     }
@@ -105,6 +165,4 @@ class MediaHandler {
     class var sharedInstance: MediaHandler {
         return shared!
     }
-    
-    
 }

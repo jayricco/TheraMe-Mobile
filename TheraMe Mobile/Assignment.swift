@@ -8,13 +8,20 @@
 
 import Foundation
 
+public enum AssignmentState: Int {
+    case awaitingCompletion = 0
+    case inProgress = 1
+    case completed = 2
+    case unfinishedWithFeedback = 3
+}
+
 class Assignment {
     var id: String?
     var exercise: Exercise
     var dateAssigned: TimeInterval
     var order: Int
     var last_completed: String?
-    var complete: Bool
+    var state: AssignmentState
     
     required init(exercise: Exercise, dateAssigned: TimeInterval, order: Int) {
         self.id = nil
@@ -22,7 +29,7 @@ class Assignment {
         self.dateAssigned = dateAssigned
         self.order = order
         self.last_completed = nil
-        self.complete = false
+        self.state = .awaitingCompletion
     }
     
     init(id: String, exercise: Exercise, dateAssigned: TimeInterval, order: Int, last_completed: String?) {
@@ -31,7 +38,7 @@ class Assignment {
         self.dateAssigned = dateAssigned
         self.order = order
         self.last_completed = last_completed
-        self.complete = false
+        self.state = .awaitingCompletion
     }
 }
 extension Assignment {
@@ -43,4 +50,5 @@ extension Assignment {
                   order: json["order"] as! Int,
                   last_completed: json["last_completed"] as? String)
     }
+    
 }

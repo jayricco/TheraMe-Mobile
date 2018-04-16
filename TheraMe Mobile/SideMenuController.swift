@@ -37,7 +37,7 @@ class SideMenuController : UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if SharedObjectManager.shared.assignments![indexPath.item].complete {
+        if SharedObjectManager.shared.assignments![indexPath.item].state == .completed {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AssignmentCellDone", for: indexPath) as! AssignmentCellDone
             let thisAssignment = SharedObjectManager.shared.assignments![indexPath.item]
             let thisExercise = thisAssignment.exercise

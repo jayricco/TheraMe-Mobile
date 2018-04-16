@@ -20,16 +20,17 @@ class SharedObjectManager {
     var assignments: [Assignment]?
     var auth_key: String?
     var thumbnails: [String: UIImage]?
-    var queuePlayer: AVQueuePlayer?
-    var principalUser: String?
+    var principalUser: User?
     var currentAssignment: Assignment?
+    var playerAssignMap: [AVPlayerItem: Assignment]?
+    var fin_unfin_count: (Int, Int) = (0, 0)
     init() {
         assignments = nil
         auth_key = nil
         thumbnails = nil
-        queuePlayer = nil
         principalUser = nil
         currentAssignment = nil
+        playerAssignMap = nil
     }
     
 }
