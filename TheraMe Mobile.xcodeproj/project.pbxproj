@@ -118,6 +118,7 @@
 		EBC86DF42079A39B00D405D4 = {
 			isa = PBXGroup;
 			children = (
+				EBC86E602084E57C00D405D4 /* README.md */,
 				EBC86E3B2079A92400D405D4 /* podfile */,
 				EBC86DFF2079A39B00D405D4 /* TheraMe Mobile */,
 				EBC86E142079A39B00D405D4 /* TheraMe MobileTests */,
@@ -155,7 +156,6 @@
 				EBC86E54207A785300D405D4 /* AssignmentCellDone.swift */,
 				EBC86E56207A785F00D405D4 /* AssignmentCellNotDone.swift */,
 				EBC86E58207AB7F900D405D4 /* WelcomeViewController.swift */,
-				EBC86E602084E57C00D405D4 /* README.md */,
 				EBC86E612084EEA500D405D4 /* User.swift */,
 				EBC86E632084F7E400D405D4 /* ExercisePlayer.swift */,
 				EBAED1BA2085202C006D8311 /* LoginButton.swift */,
