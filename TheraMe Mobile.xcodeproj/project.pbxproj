@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2EF8870D8DB0A682FC02BE14 /* Pods_TheraMe_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874AB83A9A53C46551E13A70 /* Pods_TheraMe_Mobile.framework */; };
 		EB71AF9C208632E2009AC24F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBC86E0C2079A39B00D405D4 /* Info.plist */; };
+		EB71AF9E20863610009AC24F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EB71AF9D20863610009AC24F /* README.md */; };
 		EBAED1BB2085202C006D8311 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BA2085202C006D8311 /* LoginButton.swift */; };
 		EBAED1BD20852855006D8311 /* FadeInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BC20852855006D8311 /* FadeInAnimator.swift */; };
 		EBAED1BF2085317D006D8311 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BE2085317D006D8311 /* Spinner.swift */; };
@@ -51,6 +52,7 @@
 		2803BD3B4CC5EF369A8A29FA /* Pods-TheraMe Mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheraMe Mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		3A70BB17C831A4806E56E068 /* Pods-TheraMe Mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheraMe Mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheraMe Mobile/Pods-TheraMe Mobile.release.xcconfig"; sourceTree = "<group>"; };
 		874AB83A9A53C46551E13A70 /* Pods_TheraMe_Mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheraMe_Mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB71AF9D20863610009AC24F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EBAED1BA2085202C006D8311 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		EBAED1BC20852855006D8311 /* FadeInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInAnimator.swift; sourceTree = "<group>"; };
 		EBAED1BE2085317D006D8311 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		EBC86DF42079A39B00D405D4 = {
 			isa = PBXGroup;
 			children = (
+				EB71AF9D20863610009AC24F /* README.md */,
 				EBC86E3B2079A92400D405D4 /* podfile */,
 				EBC86DFF2079A39B00D405D4 /* TheraMe Mobile */,
 				EBC86E142079A39B00D405D4 /* TheraMe MobileTests */,
@@ -271,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB71AF9E20863610009AC24F /* README.md in Resources */,
 				EBC86E0B2079A39B00D405D4 /* LaunchScreen.storyboard in Resources */,
 				EBC86E082079A39B00D405D4 /* Assets.xcassets in Resources */,
 				EBC86E3C2079A92400D405D4 /* podfile in Resources */,
