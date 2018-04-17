@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EF8870D8DB0A682FC02BE14 /* Pods_TheraMe_Mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874AB83A9A53C46551E13A70 /* Pods_TheraMe_Mobile.framework */; };
+		EB71AF9C208632E2009AC24F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBC86E0C2079A39B00D405D4 /* Info.plist */; };
 		EBAED1BB2085202C006D8311 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BA2085202C006D8311 /* LoginButton.swift */; };
 		EBAED1BD20852855006D8311 /* FadeInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BC20852855006D8311 /* FadeInAnimator.swift */; };
 		EBAED1BF2085317D006D8311 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAED1BE2085317D006D8311 /* Spinner.swift */; };
@@ -273,6 +274,7 @@
 				EBC86E0B2079A39B00D405D4 /* LaunchScreen.storyboard in Resources */,
 				EBC86E082079A39B00D405D4 /* Assets.xcassets in Resources */,
 				EBC86E3C2079A92400D405D4 /* podfile in Resources */,
+				EB71AF9C208632E2009AC24F /* Info.plist in Resources */,
 				EBC86E062079A39B00D405D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
