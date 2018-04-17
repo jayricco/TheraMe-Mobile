@@ -34,6 +34,16 @@ class SharedObjectManager {
         playerAssignMap = nil
     }
     
+    func reset() {
+        self.assignments = nil
+        self.auth_key = nil
+        self.thumbnails = nil
+        self.principalUser = nil
+        self.currentAssignment = nil
+        self.playerAssignMap = [:]
+        self.fin_unfin_count = (0, 0)
+    }
+    
 }
 
 

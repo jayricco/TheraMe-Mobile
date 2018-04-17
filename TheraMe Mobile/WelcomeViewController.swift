@@ -52,5 +52,12 @@ class WelcomeViewController : UIViewController {
     @IBAction func startButtonPress(_ sender: UIButton) {
         performSegue(withIdentifier: "ViewSegue", sender: self)
     }
+    
+    @IBAction func noExercisesPress(_ sender: UIButton) {
+        let vc = storyboard!.instantiateViewController(withIdentifier: "LoginViewController")
+        present(vc, animated: true) {
+            SharedObjectManager.shared.reset()
+        }
+    }
 }
 
