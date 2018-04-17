@@ -70,7 +70,7 @@ class HomeViewController : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
 
          let assetQueuePlayer = SharedObjectManager.shared.assignments!.map { (assignment) -> (AVPlayerItem, Assignment) in
-            let pi = (AVPlayerItem(url: URL(string: "https://localhost:8443/api/video?id=\(assignment.exercise.id!)")!), assignment)
+            let pi = (AVPlayerItem(url: URL(string: SharedObjectManager.shared.mainURL + "/api/video?id=\(assignment.exercise.id!)")!), assignment)
             pi.0.addObserver(self,
                                    forKeyPath: #keyPath(AVPlayerItem.status),
                                    options: [.old, .new],
@@ -112,23 +112,10 @@ class HomeViewController : UIViewController {
             
             switch status {
                 case .readyToPlay:
-                    let current = SharedObjectManager.shared.playerAssignMap!.mapValues {
-                        (assign) in
-                        assign.state
-                        }.reduce((0, 0), { (d_nd, pi_as) -> (Int, Int) in
-                            var complete = d_nd.0
-                            var incomplete = d_nd.1
-                            if(pi_as.value == AssignmentState.completed || pi_as.value == AssignmentState.unfinishedWithFeedback) {
-                                complete += 1
-                            } else {
-                                incomplete += 1
-                            }
-                            return (complete, incomplete)
-                        })
-                    SharedObjectManager.shared.fin_unfin_count = current
+                    
                     
                     let thisAssign = SharedObjectManager.shared.playerAssignMap![object as! AVPlayerItem]!
-                    if (current.1 == 1) {
+                    if (SharedObjectManager.shared.fin_unfin_count.1 == 1) {
                         lastAssign = thisAssign
                     }
                     thisAssign.state = .inProgress
@@ -166,7 +153,7 @@ class HomeViewController : UIViewController {
         playerItem.removeObserver(self, forKeyPath: #keyPath(AVPlayerItem.status))
     
         let dg = DispatchGroup()
-        let req = NSMutableURLRequest(url: URL(string: "https://localhost:8443/api/history/add?assignmentId=\(SharedObjectManager.shared.playerAssignMap![playerItem]!.id!)")!)
+        let req = NSMutableURLRequest(url: URL(string: SharedObjectManager.shared.mainURL + "/api/history/add?assignmentId=\(SharedObjectManager.shared.playerAssignMap![playerItem]!.id!)")!)
         req.httpMethod = "POST"
         dg.enter()
         let task = self.session!.dataTask(with: req as URLRequest) { (data, resp, err) in
@@ -178,14 +165,27 @@ class HomeViewController : UIViewController {
         }
         task.resume()
         dg.notify(queue: DispatchQueue.main) {
+            let current = SharedObjectManager.shared.playerAssignMap!.mapValues {
+                (assign) in
+                assign.state
+                }.reduce((0, 0), { (d_nd, pi_as) -> (Int, Int) in
+                    var complete = d_nd.0
+                    var incomplete = d_nd.1
+                    if(pi_as.value == AssignmentState.completed || pi_as.value == AssignmentState.unfinishedWithFeedback) {
+                        complete += 1
+                    } else {
+                        incomplete += 1
+                    }
+                    return (complete, incomplete)
+                })
+            SharedObjectManager.shared.fin_unfin_count = current
             if(self.lastAssign != nil && self.lastAssign! === thisAssign) {
                 print("LAST ASSIGNMENT FINISHED")
                 self.lastAssignFinished = true
-                let vc = self.storyboard!.instantiateViewController(withIdentifier: "WelcomeView")
-                self.present(vc, animated: true, completion: nil)
-            } else {
-                 self.continueButton.isHidden = false
+                self.continueButton.titleLabel?.text! = "Finish Up For Today!"
             }
+             self.continueButton.isHidden = false
+            
         }
     }
     @IBAction func helpRequested(_ sender: Any) {
@@ -203,7 +203,7 @@ class HomeViewController : UIViewController {
             let exerciseId = relevantAssignment.exercise.id!
             let encodedMessage = message.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
 
-            let url = URL(string: "https://localhost:8443/api/history/feedbackAdd?exerciseId=\(exerciseId)&feedback=\(encodedMessage)")!
+            let url = URL(string: SharedObjectManager.shared.mainURL + "/api/history/feedbackAdd?exerciseId=\(exerciseId)&feedback=\(encodedMessage)")!
             let req = NSMutableURLRequest(url: url)
             req.httpMethod = "POST"
             let task = self.session!.dataTask(with: req as URLRequest) { (data, resp, err) in
@@ -232,8 +232,13 @@ class HomeViewController : UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     @IBAction func continuePressed(_ sender: Any) {
-        (self.dest?.player as! AVQueuePlayer).advanceToNextItem()
-        (self.dest?.player as! AVQueuePlayer).play()
+        if self.lastAssignFinished  {
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: "WelcomeView")
+            self.present(vc, animated: true, completion: nil)
+        } else {
+            (self.dest?.player as! AVQueuePlayer).advanceToNextItem()
+            (self.dest?.player as! AVQueuePlayer).play()
+        }
         self.continueButton.isHidden = true
     }
     

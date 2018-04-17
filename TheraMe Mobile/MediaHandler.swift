@@ -130,7 +130,7 @@ class MediaHandler: NSObject, AVAssetDownloadDelegate {
                 return preStored
             }
             else {
-                let task = self.session!.dataTask(with: URL(string: "https://localhost:8443/api/thumbnail?id=\(id)")!) {
+                let task = self.session!.dataTask(with: URL(string: SharedObjectManager.shared.mainURL + "/api/thumbnail?id=\(id)")!) {
                     (data, response, error) in
                     if let error = error {
 

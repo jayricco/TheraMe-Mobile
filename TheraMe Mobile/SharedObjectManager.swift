@@ -24,6 +24,7 @@ class SharedObjectManager {
     var currentAssignment: Assignment?
     var playerAssignMap: [AVPlayerItem: Assignment]?
     var fin_unfin_count: (Int, Int) = (0, 0)
+    var mainURL: String = "https://159.203.76.153:443" 
     init() {
         assignments = nil
         auth_key = nil

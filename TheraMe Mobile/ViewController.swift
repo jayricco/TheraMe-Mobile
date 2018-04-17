@@ -53,7 +53,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         URLCredentialStorage.shared.setDefaultCredential(credential, for: protectionSpace)
         
         let urlSession = URLSession(configuration: sessionConfig!)
-        let request = URLRequest(url: URL(string: "https://localhost:8443/api/checkauth")!)
+        let request = URLRequest(url: URL(string: SharedObjectManager.shared.mainURL + "/api/checkauth")!)
         var loginSuccess = false
         dispatchGroup.enter()
         let task = urlSession.dataTask(with: request) { (data, response, error) in
@@ -107,7 +107,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
             sessionConfig.httpAdditionalHeaders = ["Authorization": SharedObjectManager.shared.auth_key!]
             
             let urlSession = URLSession(configuration: sessionConfig)
-            let request = URLRequest(url: URL(string: "https://localhost:8443/api/assignments")!, cachePolicy: URLRequest.CachePolicy.reloadRevalidatingCacheData, timeoutInterval: 36000)
+            let request = URLRequest(url: URL(string: SharedObjectManager.shared.mainURL + "/api/assignments")!, cachePolicy: URLRequest.CachePolicy.reloadRevalidatingCacheData, timeoutInterval: 36000)
             
             let task = urlSession.dataTask(with: request) { (data, response, error) in
                 guard let json = try? JSONSerialization.jsonObject(with: data!, options: [.mutableContainers]) else {

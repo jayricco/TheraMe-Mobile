@@ -16,13 +16,13 @@ class ExercisePlayer: AVPlayerViewController {
         super.viewDidLoad()
         let cov = self.contentOverlayView!
         
-        let butt = UIButton(type: .roundedRect)
+        let button = UIButton(type: .roundedRect)
         
-        let buttLabel = butt.titleLabel!
-        buttLabel.font.withSize(21.0)
-        buttLabel.text = "Fuck Grandma"
+        let buttonLabel = button.titleLabel!
+        buttonLabel.font.withSize(21.0)
+        buttonLabel.text = ""
         cov.contentMode = .center
-        cov.addSubview(butt)
+        cov.addSubview(button)
         cov.updateConstraintsIfNeeded()
     }
     
