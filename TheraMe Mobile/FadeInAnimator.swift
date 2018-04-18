@@ -35,9 +35,12 @@ public class FadeInAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
             toView.alpha = 1.0
             fromView.alpha = 0.0
-        }) { (_) in
+        }) {(_) in
             fromView.alpha = 1.0
-        transitionContext.completeTransition(true)
+            self.doclose(transitionContext: transitionContext)
         }
+    }
+    private func doclose(transitionContext: UIViewControllerContextTransitioning ) {
+        transitionContext.completeTransition(true)
     }
 }

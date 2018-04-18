@@ -12,8 +12,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
 
     @IBOutlet weak var visualeffectview: UIVisualEffectView!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet var emailField: UITextField!
+    @IBOutlet var passwordField: UITextField!
     @IBOutlet weak var loginButton: LoginButton!
     
     var dispatchGroup: DispatchGroup = DispatchGroup()
@@ -40,17 +40,19 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     }
 
     @IBAction func buttonPressed(_ sender: Any, forEvent event: UIEvent) {
-        self.setEditing(false, animated: true)
+        let email = emailField.text!
+        let pass = passwordField.text!
 
-        
-        let auth_token = "Basic " + NSData(data: (emailField.text! + ":" + passwordField.text!).data(using: String.Encoding.utf8)!).base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters)
+        print(email)
+        print(pass)
+        let auth_token = "Basic " + NSData(data: (email + ":" + pass).data(using: String.Encoding.utf8)!).base64EncodedString(options: NSData.Base64EncodingOptions.lineLength64Characters)
         sessionConfig?.httpAdditionalHeaders = ["Authorization": auth_token]
         
         let protectionSpace = URLProtectionSpace(host: "localhost", port: 8443, protocol: "https", realm: "TheraMe", authenticationMethod: NSURLAuthenticationMethodHTTPBasic)
         
-        let credential = URLCredential(user: emailField.text!, password: passwordField.text!, persistence: .forSession)
+       /* let credential = URLCredential(user: email, password: pass, persistence: .forSession)
         
-        URLCredentialStorage.shared.setDefaultCredential(credential, for: protectionSpace)
+        URLCredentialStorage.shared.setDefaultCredential(credential, for: protectionSpace)*/
         
         let urlSession = URLSession(configuration: sessionConfig!)
         let request = URLRequest(url: URL(string: SharedObjectManager.shared.mainURL + "/api/checkauth")!)
@@ -128,10 +130,7 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.view.subviews.forEach { (uiview) in
 
-            uiview.layer.removeFromSuperlayer()
-        }
     }
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return FadeInAnimator(transitionDuration: 0.5, startingAlpha: 0.8)
