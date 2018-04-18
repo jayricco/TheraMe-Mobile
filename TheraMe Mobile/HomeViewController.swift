@@ -214,8 +214,13 @@ class HomeViewController : UIViewController {
             }
             task.resume()
             
-            (self.dest?.player as! AVQueuePlayer).advanceToNextItem()
-            (self.dest?.player as! AVQueuePlayer).play()
+            if self.lastAssignFinished  {
+                let vc = self.storyboard!.instantiateViewController(withIdentifier: "WelcomeView")
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                (self.dest?.player as! AVQueuePlayer).advanceToNextItem()
+                (self.dest?.player as! AVQueuePlayer).play()
+            }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
