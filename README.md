@@ -21,6 +21,10 @@ Once homebrew has been installed, open a terminal instance, and run
 `brew install cocoapods`
 After that navigate the terminal session to the root of the TheraMe Mobile directory (where the podfile is), and run
 `pod install`
+
 Once cocoapods has finished generating it's dependencies, open the workspace as specified in the build output.
-Make sure that the simulator you use is the iPhone X, for convenience sake as others should work but are untested. This can be set by clicking the tab to the right of the cheveron, two elements right of the play button in Xcode's upper left corner.
+
+> Make sure that the simulator you use is the iPhone X, for convenience sake as others should work but are untested.
+This can be set by clicking the tab to the right of the cheveron, two elements right of the play button in Xcode's upper left corner.
+
 9. Click the big play button and run the app!
