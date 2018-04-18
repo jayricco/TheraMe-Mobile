@@ -6,6 +6,7 @@ iOS App, written in Swift 4 for accessing TheraMe as a patient
 1. Download and install the latest version of Xcode.
 2. Go to "File -> Open", and select the "TheraMe Mobile.xcworkspace" file and wait for the project to load.
 3. Go to "Xcode -> Open Developer Tool -> Simulator", and wait for it to load.
+> Make sure the simulator is an iPhone X, iOS 11.2. This can be set by navigating to the menubar and locating "Hardware" -> "Device" -> "iOS 11.2" -> "iPhone X"
 4. Grab the "TheraMe_root.cer" file in the "TheraMe Mobile" directory and drag and drop it into the simulator window.
 5. Wait for Safari Mobile to load, and click accept on the alert, allowing the certificate to be installed on the device.
 6. Tap "Install", in the top right corner, and continue to tap "Install", in various parts of the screen until finally the certificate authority has been installed.
