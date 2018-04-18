@@ -50,9 +50,9 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
         
         let protectionSpace = URLProtectionSpace(host: "localhost", port: 8443, protocol: "https", realm: "TheraMe", authenticationMethod: NSURLAuthenticationMethodHTTPBasic)
         
-       /* let credential = URLCredential(user: email, password: pass, persistence: .forSession)
+        let credential = URLCredential(user: email, password: pass, persistence: .forSession)
         
-        URLCredentialStorage.shared.setDefaultCredential(credential, for: protectionSpace)*/
+        URLCredentialStorage.shared.setDefaultCredential(credential, for: protectionSpace)
         
         let urlSession = URLSession(configuration: sessionConfig!)
         let request = URLRequest(url: URL(string: SharedObjectManager.shared.mainURL + "/api/checkauth")!)
@@ -92,6 +92,8 @@ class ViewController: UIViewController, UIViewControllerTransitioningDelegate {
                 
             } else {
                 print("Invalid Login")
+                self.emailField.backgroundColor = UIColor.red
+                self.passwordField.backgroundColor = UIColor.red
             }
         }
     }
